@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="160dp"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="160dp"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:layout_centerInParent="true">
+
+        <TextView
+            style="@style/Text_333_28"
+            android:text="新建类型"/>
+
+        <android.support.design.widget.TextInputLayout
+            style="@style/BlackInputStyle"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="请输入名称"
+            android:textColorHint="@color/grey_666666">
+
+            <android.support.design.widget.TextInputEditText
+                style="@style/BlackInputStyle"
+                android:id="@+id/classify_name_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/grey_333333"
+                android:textSize="@dimen/font_size_24"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/bt"
+        android:layout_width="200dp"
+        android:layout_height="160dp"
+        android:orientation="vertical"
+        android:layout_alignParentRight="true">
+        
+        <Button
+            android:id="@+id/cancel_bt"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textColor="@color/grey_666666"
+            android:textSize="@dimen/font_size_24"
+            android:text="取消"
+            android:background="?android:attr/selectableItemBackground"/>
+
+        <Button
+            android:id="@+id/confirm_bt"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_24"
+            android:text="确定"
+            android:background="@drawable/black_click_select"/>
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="160dp"
+        android:background="@color/color_dddddd"
+        android:layout_toLeftOf="@+id/bt"/>
+
+</RelativeLayout>

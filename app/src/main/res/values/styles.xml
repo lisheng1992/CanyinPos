@@ -1,0 +1,133 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <!--界面颜色，全屏无标题栏-->
+    <style name="AppBaseTheme" parent="AppTheme">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+    <style name="FullscreenTheme" parent="AppTheme">
+        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="metaButtonBarStyle">?android:attr/buttonBarStyle</item>
+        <item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
+    </style>
+
+    <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+    <style name="TopDialogAnim" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_top</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_top</item>
+    </style>
+
+    <style name="PopupAnim" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/popup_enter</item>
+        <item name="android:windowExitAnimation">@anim/popup_exit</item>
+    </style>
+
+    <style name="BlackInputStyle">
+        <!-- 底部线 默认颜色 -->
+        <item name="colorControlNormal">@color/white</item>
+        <!-- 底部线 EditText激活时颜色 -->
+        <item name="colorControlActivated">@color/white</item>
+    </style>
+
+    <!--editText样式-->
+    <style name="editTextStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@null</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/grey_333333</item>
+        <item name="android:textColorHint">@color/color_dddddd</item>
+        <item name="android:textSize">@dimen/font_size_18</item>
+    </style>
+
+    <style name="editTextStyle2">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@null</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/grey_333333</item>
+        <item name="android:textColorHint">@color/color_dddddd</item>
+        <item name="android:textSize">@dimen/font_size_18</item>
+    </style>
+
+    <!--*样式-->
+    <style name="star_style" parent="Base_Text">
+        <item name="android:text">*</item>
+        <item name="android:textColor">@color/little_red</item>
+        <item name="android:textSize">@dimen/font_size_18</item>
+    </style>
+
+    <style name="Base_Text">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="Text_333_28" parent="Base_Text">
+        <item name="android:textColor">@color/grey_333333</item>
+        <item name="android:textSize">@dimen/font_size_28</item>
+    </style>
+
+    <style name="Text_333_20" parent="Base_Text">
+        <item name="android:textColor">@color/grey_333333</item>
+        <item name="android:textSize">@dimen/font_size_20</item>
+    </style>
+
+    <style name="Text_333_18" parent="Base_Text">
+        <item name="android:textColor">@color/grey_333333</item>
+        <item name="android:textSize">@dimen/font_size_18</item>
+    </style>
+
+    <style name="Text_333_14" parent="Base_Text">
+        <item name="android:textColor">@color/grey_333333</item>
+        <item name="android:textSize">@dimen/font_size_14</item>
+    </style>
+
+    <style name="Text_666_18" parent="Base_Text">
+        <item name="android:textColor">@color/grey_666666</item>
+        <item name="android:textSize">@dimen/font_size_18</item>
+    </style>
+
+    <style name="Little_red_18" parent="Base_Text">
+        <item name="android:textColor">@color/little_red</item>
+        <item name="android:textSize">@dimen/font_size_18</item>
+    </style>
+
+    <style name="Little_red_24" parent="Base_Text">
+        <item name="android:textColor">@color/little_red</item>
+        <item name="android:textSize">@dimen/font_size_24</item>
+    </style>
+
+    <style name="White_18" parent="Base_Text">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/font_size_18</item>
+    </style>
+
+    <style name="White_20" parent="Base_Text">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/font_size_20</item>
+    </style>
+
+    <style name="White_14" parent="Base_Text">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/font_size_14</item>
+    </style>
+
+</resources>

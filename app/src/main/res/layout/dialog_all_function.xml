@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:background="@color/color_dddddd">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/head_black"
+        android:paddingLeft="20dp">
+
+        <TextView
+            style="@style/White_20"
+            android:text="所有功能"
+            android:layout_centerVertical="true"/>
+        <FrameLayout
+            android:id="@+id/cancle_fl"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/black_click_select"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/cha_white"
+                android:layout_gravity="center"/>
+        </FrameLayout>
+
+    </RelativeLayout>
+
+    <easyrecyclerview.EasyRecyclerView
+        android:id="@+id/all_function_erv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:scrollbars="none"
+        app:recyclerClipToPadding="false"
+        app:recyclerPaddingTop="20dp"
+        app:recyclerPaddingLeft="20dp"
+        app:recyclerPaddingRight="20dp"
+        app:recyclerPaddingBottom="40dp"/>
+    
+</LinearLayout>

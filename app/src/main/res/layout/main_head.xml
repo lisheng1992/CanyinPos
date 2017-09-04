@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@color/head_black"
+                android:paddingRight="30dp">
+
+    <TextView
+        android:id="@+id/back_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:drawableLeft="@drawable/white_left_arrow"
+        android:drawablePadding="10dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="30dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_20"/>
+
+    <Button
+        android:id="@+id/head_right_bt"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/black_click_select"
+        android:textSize="14sp"
+        android:text="新增入库"
+        android:textColor="@color/color_dddddd"
+        android:gravity="center"
+        android:visibility="gone"/>
+
+
+</RelativeLayout>

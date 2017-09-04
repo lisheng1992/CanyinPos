@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:background="@color/color_eeeeee">
+
+    <easyrecyclerview.EasyRecyclerView
+        android:id="@+id/goods_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:scrollbars="none"
+        app:recyclerClipToPadding="false"
+        app:recyclerPadding="10dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/goods_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="40dp"
+        android:src="@drawable/ic_arrow_upward"
+        app:elevation="10dp"
+        app:fabSize="normal"
+        app:pressedTranslationZ="12dp"
+        app:rippleColor="@color/little_red"
+        app:borderWidth = "0dp"
+        app:layout_behavior=".widget.ScrollAwareFABBehavior"/>
+
+
+</android.support.design.widget.CoordinatorLayout>
