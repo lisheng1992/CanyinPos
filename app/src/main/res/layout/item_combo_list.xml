@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="2dp"
+    app:cardElevation="2dp">
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:gravity="center_vertical">
+            <TextView
+                android:id="@+id/combo_name_tv"
+                style="@style/Text_333_18"
+                android:text="套餐名称"/>
+            <TextView
+                android:id="@+id/combo_pattern_tv"
+                style="@style/Text_333_18"
+                android:layout_marginLeft="30dp"
+                android:text="套餐模式"/>
+            <TextView
+                style="@style/Text_333_18"
+                android:layout_marginLeft="30dp"
+                android:text="售价："/>
+            <TextView
+                android:id="@+id/sell_price_tv"
+                style="@style/Little_red_24"
+                android:text="¥22.00"/>
+            <TextView
+                style="@style/Text_333_18"
+                android:layout_marginLeft="30dp"
+                android:text="会员价："/>
+            <TextView
+                android:id="@+id/vip_price_tv"
+                style="@style/Little_red_24"
+                android:text="¥20.00"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/combo_edit_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/combo_edit"
+                android:padding="10dp"
+                android:layout_marginRight="10dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:foreground="?attr/selectableItemBackgroundBorderless"/>
+
+            <ImageView
+                android:id="@+id/combo_delete_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/delete_combo"
+                android:padding="10dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:foreground="?attr/selectableItemBackgroundBorderless"/>
+
+        </LinearLayout>
+
+        <easyrecyclerview.EasyRecyclerView
+            android:id="@+id/combo_goods_erv"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            app:scrollbars="none"/>
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+</android.support.v7.widget.CardView>

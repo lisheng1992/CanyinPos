@@ -85,6 +85,11 @@
         <item name="android:textSize">@dimen/font_size_28</item>
     </style>
 
+    <style name="Text_333_24" parent="Base_Text">
+        <item name="android:textColor">@color/grey_333333</item>
+        <item name="android:textSize">@dimen/font_size_24</item>
+    </style>
+
     <style name="Text_333_20" parent="Base_Text">
         <item name="android:textColor">@color/grey_333333</item>
         <item name="android:textSize">@dimen/font_size_20</item>

@@ -10,6 +10,8 @@ import com.canyinpos.R;
 import com.canyinpos.mvp.adapter.FragmentAdapter;
 import com.canyinpos.mvp.ui.activities.base.BaseActivity;
 import com.canyinpos.mvp.ui.fragments.AllGoodsFragment;
+import com.canyinpos.mvp.ui.fragments.ComboGoodsFragment;
+import com.canyinpos.mvp.ui.fragments.FlavorFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -101,8 +103,8 @@ public class GoodsManageActivity extends BaseActivity {
     private void initViewPage() {
         mFragments = new ArrayList<>();
         mFragments.add(new AllGoodsFragment());
-        mFragments.add(new AllGoodsFragment());
-        mFragments.add(new AllGoodsFragment());
+        mFragments.add(new ComboGoodsFragment());
+        mFragments.add(new FlavorFragment());
         mFragments.add(new AllGoodsFragment());
         mFragments.add(new AllGoodsFragment());
         mFragments.add(new AllGoodsFragment());

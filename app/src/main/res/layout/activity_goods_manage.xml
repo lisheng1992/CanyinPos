@@ -10,7 +10,7 @@
         android:layout_width="130dp"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="#605271">
+        android:background="#4e4743">
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -37,7 +37,8 @@
             app:ntb_title_mode="all"
             app:ntb_title_size="14sp"
             app:ntb_titled="true"
-            app:ntb_animation_duration="200"/>
+            app:ntb_animation_duration="200"
+            app:ntb_bg_color="#4e4743"/>
     </LinearLayout>
 
     <android.support.v4.view.ViewPager

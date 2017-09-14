@@ -5,6 +5,9 @@
     <list>
         <mapping class="com.canyinpos.mvp.bean.ClassifyBean"></mapping>
         <mapping class="com.canyinpos.mvp.bean.GoodsBean"></mapping>
+        <mapping class="com.canyinpos.mvp.bean.FlavorBean"></mapping>
+        <mapping class="com.canyinpos.mvp.bean.FunctionBean"></mapping>
+        <mapping class="com.canyinpos.mvp.bean.GoodsSpecBean"></mapping>
     </list>
 
 </litepal>

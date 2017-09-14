@@ -16,7 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".mvp.ui.activities.AddGoodsActivity"
+            android:name=".mvp.ui.activities.GoodsManageActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:launchMode="singleTask"
             android:theme="@style/AppBaseTheme"
@@ -30,7 +30,7 @@
             android:name=".mvp.ui.activities.LoginActivity">
         </activity>
         <activity
-            android:name=".mvp.ui.activities.MainActivity">
+            android:name=".mvp.ui.activities.AddGoodsActivity">
         </activity>
     </application>
 

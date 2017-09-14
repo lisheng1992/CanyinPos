@@ -1,11 +1,13 @@
 package com.canyinpos.mvp.bean;
 
+import org.litepal.crud.DataSupport;
+
 /**
  * 作者：Hao on 2017/8/24 15:55
  * 邮箱：shengxuan@izjjf.cn
  */
 
-public class FunctionBean {
+public class FunctionBean extends DataSupport{
     private String functionName;
     private int functionImg;
 
