@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="130dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#4e4743">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/black_click_select">
+            <TextView
+                android:id="@+id/back_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawablePadding="10dp"
+                android:drawableLeft="@drawable/white_left_arrow"
+                android:text="打印与外设"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_20"/>
+        </FrameLayout>
+        <library.ntb.NavigationTabBar
+            android:id="@+id/goods_manage_tb"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            app:ntb_scaled="true"
+            app:ntb_swiped="true"
+            app:ntb_tinted="true"
+            app:ntb_title_mode="all"
+            app:ntb_title_size="14sp"
+            app:ntb_titled="true"
+            app:ntb_animation_duration="200"
+            app:ntb_bg_color="#4e4743"/>
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/goods_manage_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>
+

@@ -100,7 +100,7 @@ public class AllGoodsFragment extends BaseFragment implements StringCallBack {
                 return new AllGoodsAdapter(parent,R.layout.item_all_goods);
             }
         };
-        initRecyclerView(mRecyclerView);
+        initRecyclerViewWithDecoratio(mRecyclerView);
         mRecyclerView.setAdapter(mArrayAdapter);
         List<GoodsBean> goodsList = new ArrayList<>();
         for (int i = 0; i < 10; i++) {

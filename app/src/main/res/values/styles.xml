@@ -135,4 +135,9 @@
         <item name="android:textSize">@dimen/font_size_14</item>
     </style>
 
+    <style name="Green_18" parent="Base_Text">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">@dimen/font_size_18</item>
+    </style>
+
 </resources>

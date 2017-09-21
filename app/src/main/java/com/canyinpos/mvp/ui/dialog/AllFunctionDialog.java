@@ -19,6 +19,8 @@ import com.canyinpos.listener.ItemDragHelperCallback;
 import com.canyinpos.mvp.adapter.FunctionAllAdapter;
 import com.canyinpos.mvp.adapter.GridSpacingItemDecoration;
 import com.canyinpos.mvp.bean.FunctionBean;
+import com.canyinpos.mvp.ui.activities.GoodsManageActivity;
+import com.canyinpos.utils.SceneUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,13 +28,14 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import easyrecyclerview.EasyRecyclerView;
+import easyrecyclerview.adapter.RecyclerArrayAdapter;
 
 /**
  * 作者：Hao on 2017/8/24 14:38
  * 邮箱：shengxuan@izjjf.cn
  */
 
-public class AllFunctionDialog extends DialogFragment {
+public class AllFunctionDialog extends DialogFragment implements RecyclerArrayAdapter.OnItemClickListener{
 
     @BindView(R.id.cancle_fl)
     FrameLayout mCancleFl;
@@ -77,6 +80,7 @@ public class AllFunctionDialog extends DialogFragment {
         mAllFunctionErv.setLayoutManager(new GridLayoutManager(getActivity(), 5));
         mAllFunctionErv.addItemDecoration(new GridSpacingItemDecoration(5, 20, false));
         mFunctionAllAdapter = new FunctionAllAdapter(getActivity(),mFunctionList);
+        mFunctionAllAdapter.setOnItemClickListener(this);
         mAllFunctionErv.setAdapter(mFunctionAllAdapter);
         ItemTouchHelper.Callback callback = new ItemDragHelperCallback(mFunctionAllAdapter);
         //用Callback构造ItemtouchHelper
@@ -89,6 +93,14 @@ public class AllFunctionDialog extends DialogFragment {
         mFunctionList = new ArrayList<>();
         for (int i = 0;i < FUNCTION_NAME.length;i++){
             mFunctionList.add(new FunctionBean(FUNCTION_NAME[i],FUNCTION_IC[i]));
+        }
+    }
+
+    @Override
+    public void onItemClick(int position) {
+        if (position == 2) {
+            SceneUtil.toScene(getActivity(), GoodsManageActivity.class,null);
+            dismiss();
         }
     }
 }

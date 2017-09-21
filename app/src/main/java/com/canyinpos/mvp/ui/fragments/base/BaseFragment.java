@@ -29,10 +29,12 @@ import android.view.ViewGroup;
 import com.canyinpos.R;
 import com.canyinpos.application.ZmhApplication;
 import com.canyinpos.mvp.presenter.base.BasePresenter;
+import com.canyinpos.utils.UIUtils;
 import com.squareup.leakcanary.RefWatcher;
 
 import butterknife.ButterKnife;
 import easyrecyclerview.EasyRecyclerView;
+import easyrecyclerview.decoration.DividerDecoration;
 
 /**
  * 作者：Hao on 2017/8/22 11:38
@@ -95,6 +97,15 @@ public abstract class BaseFragment<T extends BasePresenter> extends Fragment {
                 UIUtils.dip2px(getActivity(), 0.5f), 0, 0);
         itemDecoration.setDrawLastItem(false);
         recyclerView.addItemDecoration(itemDecoration);*/
+        recyclerView.setRefreshingColorResources(R.color.color_0099cc, R.color.color_ff8800, R.color.color_669900);
+    }
+
+    protected void initRecyclerViewWithDecoratio(EasyRecyclerView recyclerView) {
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        DividerDecoration itemDecoration = new DividerDecoration(getResources().getColor(R.color.color_dddddd),
+                UIUtils.dip2px(getActivity(), 0.5f), 0, 0);
+        itemDecoration.setDrawLastItem(false);
+        recyclerView.addItemDecoration(itemDecoration);
         recyclerView.setRefreshingColorResources(R.color.color_0099cc, R.color.color_ff8800, R.color.color_669900);
     }
 
