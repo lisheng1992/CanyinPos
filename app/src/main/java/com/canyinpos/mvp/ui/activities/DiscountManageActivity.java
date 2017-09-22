@@ -1,17 +1,14 @@
 package com.canyinpos.mvp.ui.activities;
 
-import android.os.Bundle;
-import android.os.PersistableBundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.widget.TextView;
 
 import com.canyinpos.R;
 import com.canyinpos.mvp.adapter.FragmentAdapter;
 import com.canyinpos.mvp.ui.activities.base.BaseActivity;
-import com.canyinpos.mvp.ui.fragments.AllGoodsFragment;
-import com.canyinpos.mvp.ui.fragments.ComboGoodsFragment;
-import com.canyinpos.mvp.ui.fragments.FlavorFragment;
+import com.canyinpos.mvp.ui.fragments.ClassifyDiscountFragment;
+import com.canyinpos.mvp.ui.fragments.RandomDiscountFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,55 +17,48 @@ import butterknife.BindView;
 import library.ntb.NavigationTabBar;
 
 /**
- * 作者：Hao on 2017/8/24 17:57
+ * 作者：Hao on 2017/9/21 19:33
  * 邮箱：shengxuan@izjjf.cn
  */
 
-public class GoodsManageActivity extends BaseActivity {
-
-    @BindView(R.id.goods_manage_tb)
-    NavigationTabBar mGoodsManageTb;
-    @BindView(R.id.goods_manage_vp)
-    ViewPager mGoodsManageVp;
+public class DiscountManageActivity extends BaseActivity {
+    @BindView(R.id.back_tv)
+    TextView mBackTv;
+    @BindView(R.id.discount_manage_tb)
+    NavigationTabBar mDiscountManageTb;
+    @BindView(R.id.discount_manage_vp)
+    ViewPager mDiscountManageVp;
 
     private List<Fragment> mFragments;
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
-    }
-
-    @Override
     public int getLayoutId() {
-        return R.layout.activity_goods_manage;
+        return R.layout.activity_discount_manage;
     }
 
     @Override
     public void initData() {
-        initView();
-    }
-
-    private void initView() {
         initViewPage();
         initNavigationTabModel();
     }
 
-    private void initNavigationTabModel() {
+
+    private void initNavigationTabModel(){
         final ArrayList<NavigationTabBar.Model> models = new ArrayList<>();
         models.add(
                 new NavigationTabBar.Model.Builder(
-                        getResources().getDrawable(R.drawable.all_goods),
+                        getResources().getDrawable(R.drawable.zhekou),
                         getResources().getColor(R.color.little_red))
-                        .title("全部商品")
+                        .title("分类折扣")
                         .build()
         );
         models.add(
                 new NavigationTabBar.Model.Builder(
-                        getResources().getDrawable(R.drawable.goods_combo),
+                        getResources().getDrawable(R.drawable.lijian),
                         getResources().getColor(R.color.little_red))
-                        .title("套餐")
+                        .title("随机立减")
                         .build()
         );
-        models.add(
+        /*models.add(
                 new NavigationTabBar.Model.Builder(
                         getResources().getDrawable(R.drawable.goods_flavor),
                         getResources().getColor(R.color.little_red))
@@ -95,19 +85,15 @@ public class GoodsManageActivity extends BaseActivity {
                         getResources().getColor(R.color.little_red))
                         .title("做法")
                         .build()
-        );
-        mGoodsManageTb.setModels(models);
-        mGoodsManageTb.setViewPager(mGoodsManageVp, 0);
+        );*/
+        mDiscountManageTb.setModels(models);
+        mDiscountManageTb.setViewPager(mDiscountManageVp, 0);
     }
 
     private void initViewPage() {
         mFragments = new ArrayList<>();
-        mFragments.add(new AllGoodsFragment());
-        mFragments.add(new ComboGoodsFragment());
-        mFragments.add(new FlavorFragment());
-        mFragments.add(new FlavorFragment());
-        mFragments.add(new FlavorFragment());
-        mFragments.add(new FlavorFragment());
-        mGoodsManageVp.setAdapter(new FragmentAdapter(getSupportFragmentManager(),mFragments));
+        mFragments.add(new ClassifyDiscountFragment());
+        mFragments.add(new RandomDiscountFragment());
+        mDiscountManageVp.setAdapter(new FragmentAdapter(getSupportFragmentManager(),mFragments));
     }
 }

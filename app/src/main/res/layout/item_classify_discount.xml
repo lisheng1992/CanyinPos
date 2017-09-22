@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="70dp"
+              android:orientation="horizontal"
+              android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+              android:descendantFocusability="beforeDescendants">
+
+    <TextView
+        android:id="@+id/classify_name_tv"
+        style="@style/Text_333_18"
+        android:text="套餐"
+        android:layout_centerVertical="true"/>
+
+    <TextView
+        android:id="@+id/percent_tv"
+        style="@style/Text_333_18"
+        android:text="%"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"/>
+
+    <EditText
+        android:id="@+id/classify_discount_et"
+        android:layout_toLeftOf="@+id/percent_tv"
+        android:layout_marginRight="10dp"
+        android:layout_centerVertical="true"
+        android:inputType="number"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:textSize="18sp"
+        android:textColor="@color/grey_333333"
+        android:gravity="center"
+        android:background="@drawable/white_garyborder_shape"
+        android:selectAllOnFocus="true"
+        android:text="100"/>
+
+</RelativeLayout>

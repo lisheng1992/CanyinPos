@@ -16,6 +16,10 @@ public class ClassifyBean extends DataSupport{
      */
     private String classifyName;
     /**
+     * 类别折扣
+     */
+    private int classifyDiscount;
+    /**
      * 关联的商品
      */
     private List<GoodsBean> mGoodsList;
@@ -34,5 +38,13 @@ public class ClassifyBean extends DataSupport{
 
     public void setGoodsList(List<GoodsBean> goodsList) {
         mGoodsList = goodsList;
+    }
+
+    public int getClassifyDiscount() {
+        return classifyDiscount;
+    }
+
+    public void setClassifyDiscount(int classifyDiscount) {
+        this.classifyDiscount = classifyDiscount;
     }
 }

@@ -1,4 +1,4 @@
-package com.canyinpos.mvp.ui.activities;
+package com.canyinpos.mvp.ui.fragments;
 
 import android.view.View;
 import android.widget.Button;

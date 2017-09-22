@@ -22,14 +22,14 @@
                 android:layout_gravity="center"
                 android:drawablePadding="10dp"
                 android:drawableLeft="@drawable/white_left_arrow"
-                android:text="商品管理"
+                android:text="活动管理"
                 android:textColor="@color/white"
                 android:textSize="@dimen/font_size_20"/>
         </FrameLayout>
         <library.ntb.NavigationTabBar
-            android:id="@+id/goods_manage_tb"
+            android:id="@+id/discount_manage_tb"
             android:layout_width="match_parent"
-            android:layout_height="500dp"
+            android:layout_height="170dp"
             app:ntb_scaled="true"
             app:ntb_swiped="true"
             app:ntb_tinted="true"
@@ -41,7 +41,7 @@
     </LinearLayout>
 
     <android.support.v4.view.ViewPager
-        android:id="@+id/goods_manage_vp"
+        android:id="@+id/discount_manage_vp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 </LinearLayout>

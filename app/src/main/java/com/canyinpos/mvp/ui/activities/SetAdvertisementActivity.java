@@ -1,15 +1,13 @@
-package com.canyinpos.mvp.ui.fragments;
+package com.canyinpos.mvp.ui.activities;
 
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 
 import com.canyinpos.R;
-import com.canyinpos.mvp.ui.fragments.base.BaseFragment;
+import com.canyinpos.mvp.ui.activities.base.BaseActivity;
 
 import butterknife.BindView;
 import easyrecyclerview.EasyRecyclerView;
@@ -20,7 +18,7 @@ import easyrecyclerview.EasyRecyclerView;
  * 设置副屏广告或视频
  */
 
-public class SetAdvertisementFragment extends BaseFragment {
+public class SetAdvertisementActivity extends BaseActivity {
     @BindView(R.id.ad_toolbar_layout)
     CollapsingToolbarLayout mAdToolbarLayout;
     @BindView(R.id.toolbar)
@@ -33,15 +31,15 @@ public class SetAdvertisementFragment extends BaseFragment {
     FloatingActionButton mFab;
 
     @Override
-    public void initViews(View view) {
-        ((AppCompatActivity) getActivity()).setSupportActionBar(mToolbar);
-        mAdToolbarLayout.setTitle("预览广告");
-        mAdToolbarLayout.setExpandedTitleColor(ContextCompat.getColor(getActivity(), R.color.little_red));
-        mAdToolbarLayout.setCollapsedTitleTextColor(ContextCompat.getColor(getActivity(), R.color.white));
+    public int getLayoutId() {
+        return R.layout.activity_set_advertisement;
     }
 
     @Override
-    public int getLayoutId() {
-        return R.layout.fragment_set_advertisement;
+    public void initData() {
+        setSupportActionBar(mToolbar);
+        mAdToolbarLayout.setTitle("预览广告");
+        mAdToolbarLayout.setExpandedTitleColor(ContextCompat.getColor(this, R.color.little_red));
+        mAdToolbarLayout.setCollapsedTitleTextColor(ContextCompat.getColor(this, R.color.white));
     }
 }
