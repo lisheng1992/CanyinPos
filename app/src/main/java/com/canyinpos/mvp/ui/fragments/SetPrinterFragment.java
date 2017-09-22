@@ -8,7 +8,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.CardView;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
 import com.canyinpos.R;
@@ -26,10 +25,6 @@ import easyrecyclerview.EasyRecyclerView;
  */
 
 public class SetPrinterFragment extends BaseFragment {
-    @BindView(R.id.back_tv)
-    TextView mBackTv;
-    @BindView(R.id.head_right_bt)
-    Button mHeadRightBt;
     @BindView(R.id.radar_view)
     RadarView mRadarView;
     @BindView(R.id.auto_search_cv)

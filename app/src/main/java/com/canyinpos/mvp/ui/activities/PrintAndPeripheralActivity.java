@@ -2,7 +2,6 @@ package com.canyinpos.mvp.ui.activities;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
-import android.widget.TextView;
 
 import com.canyinpos.R;
 import com.canyinpos.mvp.adapter.FragmentAdapter;
@@ -23,8 +22,6 @@ import library.ntb.NavigationTabBar;
  */
 
 public class PrintAndPeripheralActivity extends BaseActivity {
-    @BindView(R.id.back_tv)
-    TextView mBackTv;
     @BindView(R.id.print_peripheral_tb)
     NavigationTabBar mPrintPeripheralTb;
     @BindView(R.id.print_peripheral_vp)
@@ -38,8 +35,8 @@ public class PrintAndPeripheralActivity extends BaseActivity {
 
     @Override
     public void initData() {
-        initNavigationTabModel();
         initViewPage();
+        initNavigationTabModel();
     }
 
     private void initNavigationTabModel() {
