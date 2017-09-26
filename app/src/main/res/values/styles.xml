@@ -110,6 +110,16 @@
         <item name="android:textSize">@dimen/font_size_18</item>
     </style>
 
+    <style name="Text_666_16" parent="Base_Text">
+        <item name="android:textColor">@color/grey_666666</item>
+        <item name="android:textSize">@dimen/font_size_16</item>
+    </style>
+
+    <style name="Text_666_14" parent="Base_Text">
+        <item name="android:textColor">@color/grey_666666</item>
+        <item name="android:textSize">@dimen/font_size_14</item>
+    </style>
+
     <style name="Little_red_18" parent="Base_Text">
         <item name="android:textColor">@color/little_red</item>
         <item name="android:textSize">@dimen/font_size_18</item>
@@ -138,6 +148,11 @@
     <style name="Green_18" parent="Base_Text">
         <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:textSize">@dimen/font_size_18</item>
+    </style>
+
+    <style name="Green_16" parent="Base_Text">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">@dimen/font_size_16</item>
     </style>
 
 </resources>
