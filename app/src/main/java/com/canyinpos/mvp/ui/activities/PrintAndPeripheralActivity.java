@@ -7,6 +7,7 @@ import com.canyinpos.R;
 import com.canyinpos.mvp.adapter.FragmentAdapter;
 import com.canyinpos.mvp.ui.activities.base.BaseActivity;
 import com.canyinpos.mvp.ui.fragments.AllSalesFragment;
+import com.canyinpos.mvp.ui.fragments.OperateAnalyzeFragemnt;
 import com.canyinpos.mvp.ui.fragments.QianTaiTicketFragment;
 import com.canyinpos.mvp.ui.fragments.SetPrinterFragment;
 
@@ -86,7 +87,7 @@ public class PrintAndPeripheralActivity extends BaseActivity {
         mFragments.add(new SetPrinterFragment());
         mFragments.add(new QianTaiTicketFragment());
         mFragments.add(new AllSalesFragment());
-        mFragments.add(new QianTaiTicketFragment());
+        mFragments.add(new OperateAnalyzeFragemnt());
         mFragments.add(new QianTaiTicketFragment());
         mPrintPeripheralVp.setAdapter(new FragmentAdapter(getSupportFragmentManager(),mFragments));
     }
