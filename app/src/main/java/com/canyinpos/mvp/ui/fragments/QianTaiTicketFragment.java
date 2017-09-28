@@ -37,6 +37,11 @@ public class QianTaiTicketFragment extends BaseFragment {
         return R.layout.fragment_qiantai_ticket;
     }
 
+    @Override
+    public void initPresenter() {
+
+    }
+
     @OnClick(R.id.page_attack_iv)
     public void setPageAttack() {
         if (pageAttack) {

@@ -8,5 +8,5 @@ import java.util.ArrayList;
  */
 
 public interface OperateChartInteractor {
-    void setLineChartData(ArrayList<String> xData);
+    ArrayList<String> getMonthList();
 }

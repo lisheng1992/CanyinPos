@@ -56,6 +56,11 @@ public class ComboGoodsFragment extends BaseFragment {
         return R.layout.fragment_combo_goods;
     }
 
+    @Override
+    public void initPresenter() {
+
+    }
+
     public void initData() {
         mComboList = new ArrayList<>();
         for (int i = 0; i < 10; i++) {

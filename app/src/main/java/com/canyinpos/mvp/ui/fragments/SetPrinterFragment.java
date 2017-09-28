@@ -57,6 +57,11 @@ public class SetPrinterFragment extends BaseFragment {
         return R.layout.fragment_printer;
     }
 
+    @Override
+    public void initPresenter() {
+
+    }
+
     @OnClick(R.id.auto_search_cv)
     public void autoSearch() {
         mRadarView.addPoint();

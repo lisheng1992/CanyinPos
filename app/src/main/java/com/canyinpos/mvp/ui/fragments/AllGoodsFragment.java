@@ -71,6 +71,11 @@ public class AllGoodsFragment extends BaseFragment implements StringCallBack {
     }
 
     @Override
+    public void initPresenter() {
+
+    }
+
+    @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }

@@ -20,4 +20,9 @@ public class SetPriceTicketFragment extends BaseFragment{
     public int getLayoutId() {
         return 0;
     }
+
+    @Override
+    public void initPresenter() {
+
+    }
 }

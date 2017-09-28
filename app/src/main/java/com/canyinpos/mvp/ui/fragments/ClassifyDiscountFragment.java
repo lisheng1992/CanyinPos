@@ -57,6 +57,11 @@ public class ClassifyDiscountFragment extends BaseFragment {
     }
 
     @Override
+    public void initPresenter() {
+
+    }
+
+    @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         inflater.inflate(R.menu.save_menu, menu);
     }

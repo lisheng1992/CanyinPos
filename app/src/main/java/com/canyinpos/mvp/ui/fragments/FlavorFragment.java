@@ -58,6 +58,11 @@ public class FlavorFragment extends BaseFragment implements ObjectCallBack<Flavo
         return R.layout.fragment_flavor;
     }
 
+    @Override
+    public void initPresenter() {
+
+    }
+
     @OnClick(R.id.add_flavor_bt)
     public void addFlavor() {
         mAddFlavorDialog = new AddFlavorDialog();

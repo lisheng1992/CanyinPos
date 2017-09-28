@@ -72,6 +72,11 @@ public class GoodsFragment extends BaseFragment implements RecyclerArrayAdapter.
     }
 
     @Override
+    public void initPresenter() {
+
+    }
+
+    @Override
     public void onItemClick(int position) {
 
     }

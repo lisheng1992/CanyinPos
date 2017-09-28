@@ -6,11 +6,11 @@ import com.canyinpos.R;
 import com.canyinpos.mvp.ui.fragments.base.BaseFragment;
 
 /**
- * 作者：Hao on 2017/9/21 18:39
+ * 作者：Hao on 2017/9/28 16:40
  * 邮箱：shengxuan@izjjf.cn
  */
 
-public class RandomDiscountFragment extends BaseFragment {
+public class SalesRankFragment extends BaseFragment {
     @Override
     public void initViews(View view) {
 
@@ -18,7 +18,7 @@ public class RandomDiscountFragment extends BaseFragment {
 
     @Override
     public int getLayoutId() {
-        return R.layout.fragment_random_discount;
+        return R.layout.fragment_sales_rank;
     }
 
     @Override

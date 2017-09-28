@@ -50,6 +50,8 @@ public abstract class BaseFragment<T extends BasePresenter> extends Fragment {
 
     public abstract int getLayoutId();
 
+    public abstract void initPresenter();
+
     private ProgressDialog mProgressDialog;
 
     @Override
@@ -63,6 +65,7 @@ public abstract class BaseFragment<T extends BasePresenter> extends Fragment {
         if (mFragmentView == null) {
             mFragmentView = inflater.inflate(getLayoutId(), container, false);
             ButterKnife.bind(this, mFragmentView);
+            initPresenter();
             initViews(mFragmentView);
         }
         return mFragmentView;

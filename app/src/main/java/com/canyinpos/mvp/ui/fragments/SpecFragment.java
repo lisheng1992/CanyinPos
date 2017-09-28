@@ -31,6 +31,11 @@ public class SpecFragment extends BaseFragment {
         return R.layout.fragment_flavor;
     }
 
+    @Override
+    public void initPresenter() {
+
+    }
+
     @OnClick(R.id.add_flavor_bt)
     public void addSpec() {
 

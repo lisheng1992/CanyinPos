@@ -49,6 +49,11 @@ public class AllSalesFragment extends BaseFragment{
         return R.layout.fragment_all_sales;
     }
 
+    @Override
+    public void initPresenter() {
+
+    }
+
     private void initSalesPieChart() {
         mSalesPieChart.setUsePercentValues(true);
         mSalesPieChart.setExtraOffsets(20,20,20,20);
