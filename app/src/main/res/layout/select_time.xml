@@ -141,4 +141,29 @@
             android:layout_toLeftOf="@+id/yungon_iv"
             android:layout_marginRight="5dp"/>
     </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+        <TextView
+            style="@style/Text_666_16"
+            android:text="支付方式"/>
+        <ImageView
+            android:id="@+id/pay_way_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/below_arrow_bg"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+        <TextView
+            style="@style/Green_16"
+            android:text="09-26 00:00"
+            android:layout_toLeftOf="@+id/pay_way_iv"
+            android:layout_marginRight="5dp"/>
+    </RelativeLayout>
 </LinearLayout>

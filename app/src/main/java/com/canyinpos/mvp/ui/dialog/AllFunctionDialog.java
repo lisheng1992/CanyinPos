@@ -19,6 +19,7 @@ import com.canyinpos.listener.ItemDragHelperCallback;
 import com.canyinpos.mvp.adapter.FunctionAllAdapter;
 import com.canyinpos.mvp.adapter.GridSpacingItemDecoration;
 import com.canyinpos.mvp.bean.FunctionBean;
+import com.canyinpos.mvp.ui.activities.DataAnalysisActivity;
 import com.canyinpos.mvp.ui.activities.DiscountManageActivity;
 import com.canyinpos.mvp.ui.activities.GoodsManageActivity;
 import com.canyinpos.mvp.ui.activities.PrintAndPeripheralActivity;
@@ -101,7 +102,9 @@ public class AllFunctionDialog extends DialogFragment implements RecyclerArrayAd
 
     @Override
     public void onItemClick(int position) {
-        if (position == 2) {
+        if (position == 1) {
+            SceneUtil.toScene(getActivity(), DataAnalysisActivity.class,null);
+        } else if (position == 2) {
             SceneUtil.toScene(getActivity(), GoodsManageActivity.class,null);
         } else if (position == 4) {
             SceneUtil.toScene(getActivity(), DiscountManageActivity.class,null);

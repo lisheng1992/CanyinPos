@@ -9,9 +9,10 @@ import com.canyinpos.R;
 import com.canyinpos.mvp.adapter.FragmentAdapter;
 import com.canyinpos.mvp.ui.activities.base.BaseActivity;
 import com.canyinpos.mvp.ui.fragments.AllSalesFragment;
-import com.canyinpos.mvp.ui.fragments.FlavorFragment;
 import com.canyinpos.mvp.ui.fragments.OperateAnalyzeFragemnt;
+import com.canyinpos.mvp.ui.fragments.ReturnRecordFragment;
 import com.canyinpos.mvp.ui.fragments.SalesRankFragment;
+import com.canyinpos.mvp.ui.fragments.SalesRecordFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,8 +45,8 @@ public class DataAnalysisActivity extends BaseActivity {
 
     @Override
     public void initData() {
-        initNavigationTabModel();
         initViewPage();
+        initNavigationTabModel();
     }
 
     @Override
@@ -57,35 +58,35 @@ public class DataAnalysisActivity extends BaseActivity {
         final ArrayList<NavigationTabBar.Model> models = new ArrayList<>();
         models.add(
                 new NavigationTabBar.Model.Builder(
-                        getResources().getDrawable(R.drawable.all_goods),
+                        getResources().getDrawable(R.drawable.all_data),
                         getResources().getColor(R.color.little_red))
                         .title("收银汇总")
                         .build()
         );
         models.add(
                 new NavigationTabBar.Model.Builder(
-                        getResources().getDrawable(R.drawable.goods_combo),
+                        getResources().getDrawable(R.drawable.operate_analyze),
                         getResources().getColor(R.color.little_red))
                         .title("运营分析")
                         .build()
         );
         models.add(
                 new NavigationTabBar.Model.Builder(
-                        getResources().getDrawable(R.drawable.goods_flavor),
+                        getResources().getDrawable(R.drawable.sales_rank),
                         getResources().getColor(R.color.little_red))
                         .title("销售排行")
                         .build()
         );
         models.add(
                 new NavigationTabBar.Model.Builder(
-                        getResources().getDrawable(R.drawable.goods_spec),
+                        getResources().getDrawable(R.drawable.sales_record),
                         getResources().getColor(R.color.little_red))
                         .title("销售记录")
                         .build()
         );
         models.add(
                 new NavigationTabBar.Model.Builder(
-                        getResources().getDrawable(R.drawable.jialiao),
+                        getResources().getDrawable(R.drawable.return_record),
                         getResources().getColor(R.color.little_red))
                         .title("退货记录")
                         .build()
@@ -99,8 +100,8 @@ public class DataAnalysisActivity extends BaseActivity {
         mFragments.add(new AllSalesFragment());
         mFragments.add(new OperateAnalyzeFragemnt());
         mFragments.add(new SalesRankFragment());
-        mFragments.add(new FlavorFragment());
-        mFragments.add(new FlavorFragment());
+        mFragments.add(new SalesRecordFragment());
+        mFragments.add(new ReturnRecordFragment());
         mDataAnalysisVp.setAdapter(new FragmentAdapter(getSupportFragmentManager(),mFragments));
     }
 

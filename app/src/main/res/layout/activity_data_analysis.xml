@@ -40,18 +40,24 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal">
-        <library.ntb.NavigationTabBar
-            android:id="@+id/data_analysis_tb"
+        <FrameLayout
             android:layout_width="130dp"
-            android:layout_height="500dp"
-            app:ntb_scaled="true"
-            app:ntb_swiped="true"
-            app:ntb_tinted="true"
-            app:ntb_title_mode="all"
-            app:ntb_title_size="14sp"
-            app:ntb_titled="true"
-            app:ntb_animation_duration="200"
-            app:ntb_bg_color="#4e4743"/>
+            android:layout_height="match_parent"
+            android:background="@color/head_black">
+            <library.ntb.NavigationTabBar
+                android:id="@+id/data_analysis_tb"
+                android:layout_width="match_parent"
+                android:layout_height="380dp"
+                app:ntb_scaled="true"
+                app:ntb_swiped="true"
+                app:ntb_tinted="true"
+                app:ntb_title_mode="all"
+                app:ntb_title_size="14sp"
+                app:ntb_titled="true"
+                app:ntb_animation_duration="200"
+                app:ntb_bg_color="#4e4743"/>
+        </FrameLayout>
+
         <android.support.v4.view.ViewPager
             android:id="@+id/data_analysis_vp"
             android:layout_width="match_parent"
