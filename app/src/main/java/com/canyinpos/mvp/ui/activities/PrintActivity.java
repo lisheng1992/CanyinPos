@@ -18,4 +18,9 @@ public class PrintActivity extends BaseActivity {
     public void initData() {
 
     }
+
+    @Override
+    public void initPresenter() {
+
+    }
 }

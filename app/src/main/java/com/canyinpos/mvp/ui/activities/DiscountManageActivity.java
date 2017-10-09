@@ -41,6 +41,11 @@ public class DiscountManageActivity extends BaseActivity {
         initNavigationTabModel();
     }
 
+    @Override
+    public void initPresenter() {
+
+    }
+
 
     private void initNavigationTabModel(){
         final ArrayList<NavigationTabBar.Model> models = new ArrayList<>();

@@ -53,6 +53,11 @@ public class MainActivity extends BaseActivity<MainPresenterImpl> implements Mai
     }
 
     @Override
+    public void initPresenter() {
+
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }

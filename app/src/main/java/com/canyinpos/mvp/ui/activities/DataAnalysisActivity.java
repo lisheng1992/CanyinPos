@@ -1,17 +1,17 @@
 package com.canyinpos.mvp.ui.activities;
 
-import android.os.Bundle;
-import android.os.PersistableBundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.canyinpos.R;
 import com.canyinpos.mvp.adapter.FragmentAdapter;
 import com.canyinpos.mvp.ui.activities.base.BaseActivity;
-import com.canyinpos.mvp.ui.fragments.AllGoodsFragment;
-import com.canyinpos.mvp.ui.fragments.ComboGoodsFragment;
+import com.canyinpos.mvp.ui.fragments.AllSalesFragment;
 import com.canyinpos.mvp.ui.fragments.FlavorFragment;
+import com.canyinpos.mvp.ui.fragments.OperateAnalyzeFragemnt;
+import com.canyinpos.mvp.ui.fragments.SalesRankFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,41 +20,37 @@ import butterknife.BindView;
 import library.ntb.NavigationTabBar;
 
 /**
- * 作者：Hao on 2017/8/24 17:57
+ * 作者：Hao on 2017/10/9 14:51
  * 邮箱：shengxuan@izjjf.cn
+ * 数据分析
  */
 
-public class GoodsManageActivity extends BaseActivity {
-
-    @BindView(R.id.goods_manage_tb)
-    NavigationTabBar mGoodsManageTb;
-    @BindView(R.id.goods_manage_vp)
-    ViewPager mGoodsManageVp;
+public class DataAnalysisActivity extends BaseActivity {
+    @BindView(R.id.back_tv)
+    TextView mBackTv;
+    @BindView(R.id.data_print_iv)
+    ImageView mDataPrintIv;
+    @BindView(R.id.data_analysis_tb)
+    NavigationTabBar mDataAnalysisTb;
+    @BindView(R.id.data_analysis_vp)
+    ViewPager mDataAnalysisVp;
 
     private List<Fragment> mFragments;
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
-    }
 
     @Override
     public int getLayoutId() {
-        return R.layout.activity_goods_manage;
+        return R.layout.activity_data_analysis;
     }
 
     @Override
     public void initData() {
-        initView();
+        initNavigationTabModel();
+        initViewPage();
     }
 
     @Override
     public void initPresenter() {
 
-    }
-
-    private void initView() {
-        initViewPage();
-        initNavigationTabModel();
     }
 
     private void initNavigationTabModel() {
@@ -63,56 +59,49 @@ public class GoodsManageActivity extends BaseActivity {
                 new NavigationTabBar.Model.Builder(
                         getResources().getDrawable(R.drawable.all_goods),
                         getResources().getColor(R.color.little_red))
-                        .title("全部商品")
+                        .title("收银汇总")
                         .build()
         );
         models.add(
                 new NavigationTabBar.Model.Builder(
                         getResources().getDrawable(R.drawable.goods_combo),
                         getResources().getColor(R.color.little_red))
-                        .title("套餐")
+                        .title("运营分析")
                         .build()
         );
         models.add(
                 new NavigationTabBar.Model.Builder(
                         getResources().getDrawable(R.drawable.goods_flavor),
                         getResources().getColor(R.color.little_red))
-                        .title("口味")
+                        .title("销售排行")
                         .build()
         );
         models.add(
                 new NavigationTabBar.Model.Builder(
                         getResources().getDrawable(R.drawable.goods_spec),
                         getResources().getColor(R.color.little_red))
-                        .title("规格")
+                        .title("销售记录")
                         .build()
         );
         models.add(
                 new NavigationTabBar.Model.Builder(
                         getResources().getDrawable(R.drawable.jialiao),
                         getResources().getColor(R.color.little_red))
-                        .title("加料")
+                        .title("退货记录")
                         .build()
         );
-        models.add(
-                new NavigationTabBar.Model.Builder(
-                        getResources().getDrawable(R.drawable.zuofa),
-                        getResources().getColor(R.color.little_red))
-                        .title("做法")
-                        .build()
-        );
-        mGoodsManageTb.setModels(models);
-        mGoodsManageTb.setViewPager(mGoodsManageVp, 0);
+        mDataAnalysisTb.setModels(models);
+        mDataAnalysisTb.setViewPager(mDataAnalysisVp, 0);
     }
 
     private void initViewPage() {
         mFragments = new ArrayList<>();
-        mFragments.add(new AllGoodsFragment());
-        mFragments.add(new ComboGoodsFragment());
+        mFragments.add(new AllSalesFragment());
+        mFragments.add(new OperateAnalyzeFragemnt());
+        mFragments.add(new SalesRankFragment());
         mFragments.add(new FlavorFragment());
         mFragments.add(new FlavorFragment());
-        mFragments.add(new FlavorFragment());
-        mFragments.add(new FlavorFragment());
-        mGoodsManageVp.setAdapter(new FragmentAdapter(getSupportFragmentManager(),mFragments));
+        mDataAnalysisVp.setAdapter(new FragmentAdapter(getSupportFragmentManager(),mFragments));
     }
+
 }

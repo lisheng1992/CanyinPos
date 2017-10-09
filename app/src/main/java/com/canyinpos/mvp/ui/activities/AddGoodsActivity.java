@@ -23,6 +23,11 @@ public class AddGoodsActivity extends BaseActivity {
     }
 
     @Override
+    public void initPresenter() {
+
+    }
+
+    @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }

@@ -42,6 +42,11 @@ public class PrintAndPeripheralActivity extends BaseActivity {
         initNavigationTabModel();
     }
 
+    @Override
+    public void initPresenter() {
+
+    }
+
     private void initNavigationTabModel() {
         final ArrayList<NavigationTabBar.Model> models = new ArrayList<>();
         models.add(

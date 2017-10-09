@@ -25,6 +25,8 @@ public abstract class BaseActivity<T extends BasePresenter> extends AppCompatAct
 
     public abstract void initData();
 
+    public abstract void initPresenter();
+
     public T mPresenter;
 
     private Unbinder unbinder;
@@ -38,6 +40,7 @@ public abstract class BaseActivity<T extends BasePresenter> extends AppCompatAct
         int layoutId = getLayoutId();
         setContentView(layoutId);
         unbinder = ButterKnife.bind(this);
+        initPresenter();
         initData();
         //初始化键盘输入法
         methodManager = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);

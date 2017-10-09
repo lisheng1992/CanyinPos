@@ -42,4 +42,9 @@ public class SetAdvertisementActivity extends BaseActivity {
         mAdToolbarLayout.setExpandedTitleColor(ContextCompat.getColor(this, R.color.little_red));
         mAdToolbarLayout.setCollapsedTitleTextColor(ContextCompat.getColor(this, R.color.white));
     }
+
+    @Override
+    public void initPresenter() {
+
+    }
 }

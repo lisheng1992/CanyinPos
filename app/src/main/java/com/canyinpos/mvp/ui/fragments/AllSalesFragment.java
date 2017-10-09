@@ -28,6 +28,7 @@ import butterknife.BindView;
 /**
  * 作者：Hao on 2017/9/25 15:14
  * 邮箱：shengxuan@izjjf.cn
+ * 收银汇总
  */
 
 public class AllSalesFragment extends BaseFragment{

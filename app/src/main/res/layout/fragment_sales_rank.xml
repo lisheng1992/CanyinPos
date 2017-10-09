@@ -47,6 +47,99 @@
                 android:textColor="@color/grey_666666"
                 android:text="套餐"/>
         </RadioGroup>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_dddddd"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            style="@style/Text_666_18"
+            android:text="日期"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:background="@drawable/white_garyborder_shape">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="今天"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:background="@color/colorPrimary"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="交班"
+                android:textSize="14sp"
+                android:textColor="@color/grey_666666"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
+            <TextView
+                style="@style/Text_666_16"
+                android:text="从"/>
+            <ImageView
+                android:id="@+id/cong_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/below_arrow_bg"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+            <TextView
+                style="@style/Green_16"
+                android:text="09-26 00:00"
+                android:layout_toLeftOf="@+id/cong_iv"
+                android:layout_marginRight="5dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
+            <TextView
+                style="@style/Text_666_16"
+                android:text="到"/>
+            <ImageView
+                android:id="@+id/dao_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/below_arrow_bg"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+            <TextView
+                style="@style/Green_16"
+                android:text="09-26 00:00"
+                android:layout_toLeftOf="@+id/dao_iv"
+                android:layout_marginRight="5dp"/>
+        </RelativeLayout>
+
     </LinearLayout>
     <ImageView
         android:layout_width="1dp"
@@ -57,6 +150,31 @@
         android:layout_height="match_parent"
         android:layout_weight="0.75"
         android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@color/color_f5f5f5"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp">
+
+            <TextView
+                style="@style/Text_666_18"
+                android:text="名称"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                style="@style/Text_666_18"
+                android:text="金额"
+                android:layout_centerInParent="true"/>
+
+            <TextView
+                style="@style/Text_666_18"
+                android:text="数量"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+            
+        </RelativeLayout>
 
     </LinearLayout>
 

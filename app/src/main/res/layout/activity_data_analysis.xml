@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/head_black"
+            android:paddingRight="30dp"
+            android:elevation="5dp">
+
+        <TextView
+            android:id="@+id/back_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:drawableLeft="@drawable/white_left_arrow"
+            android:drawablePadding="10dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="30dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_20"
+            android:text="数据报表"/>
+
+        <ImageView
+            android:id="@+id/data_print_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/print_data"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <library.ntb.NavigationTabBar
+            android:id="@+id/data_analysis_tb"
+            android:layout_width="130dp"
+            android:layout_height="500dp"
+            app:ntb_scaled="true"
+            app:ntb_swiped="true"
+            app:ntb_tinted="true"
+            app:ntb_title_mode="all"
+            app:ntb_title_size="14sp"
+            app:ntb_titled="true"
+            app:ntb_animation_duration="200"
+            app:ntb_bg_color="#4e4743"/>
+        <android.support.v4.view.ViewPager
+            android:id="@+id/data_analysis_vp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+</LinearLayout>
