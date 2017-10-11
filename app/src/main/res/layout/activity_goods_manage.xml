@@ -14,7 +14,8 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:background="@drawable/black_click_select">
+            android:background="@drawable/black_click_select"
+            android:elevation="5dp">
             <TextView
                 android:id="@+id/back_tv"
                 android:layout_width="wrap_content"

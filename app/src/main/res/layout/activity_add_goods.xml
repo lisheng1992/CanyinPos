@@ -48,9 +48,11 @@
                         android:text="商品名称:" />
 
                     <EditText
-                        android:id="@+id/edit_bar_code"
+                        android:id="@+id/goods_name_tv"
                         style="@style/editTextStyle"
-                        android:hint="请输入商品名称" />
+                        android:hint="请输入商品名称"
+                        android:inputType="text"
+                        android:selectAllOnFocus="true"/>
 
                 </LinearLayout>
 
@@ -58,27 +60,39 @@
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:orientation="horizontal"
-                    android:paddingLeft="18dp"
-                    android:paddingRight="18dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/white_garyborder_shape">
+                    android:layout_marginTop="20dp">
 
-                    <TextView style="@style/star_style" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:orientation="horizontal"
+                        android:paddingLeft="18dp"
+                        android:paddingRight="18dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/white_garyborder_shape">
 
-                    <TextView
-                        style="@style/Text_666_18"
-                        android:text="商品条码:" />
+                        <TextView style="@style/star_style" />
 
-                    <EditText
-                        style="@style/editTextStyle2"
-                        android:hint="请通过手动或扫描枪输入条码" />
+                        <TextView
+                            style="@style/Text_666_18"
+                            android:text="商品条码:" />
+
+                        <EditText
+                            android:id="@+id/goods_barcode_et"
+                            style="@style/editTextStyle2"
+                            android:hint="请通过手动或扫描枪输入条码"
+                            android:inputType="number"/>
+                    </LinearLayout>
 
                     <Button
+                        android:id="@+id/create_barcode_bt"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:text="生成条码"
-                        android:textColor="@color/grey_666666"
-                        android:textSize="14sp"/>
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:background="@drawable/jacinth_rp"/>
 
                 </LinearLayout>
 
@@ -97,19 +111,22 @@
                         android:orientation="horizontal"
                         android:background="@drawable/white_garyborder_shape">
 
-                        <TextView style="@style/star_style" />
+                        <!--<TextView style="@style/star_style" />-->
 
                         <TextView
                             style="@style/Text_666_18"
                             android:text="商品库存:" />
 
                         <EditText
+                            android:id="@+id/goods_stock_et"
                             style="@style/editTextStyle"
-                            android:hint="请输入商品库存" />
+                            android:hint="请输入商品库存"
+                            android:inputType="number"
+                            android:maxLength="5"/>
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="300dp"
+                        android:layout_width="400dp"
                         android:layout_height="match_parent"
                         android:gravity="center_vertical"
                         android:orientation="horizontal"
@@ -126,14 +143,14 @@
                             android:text="商品类别:" />
 
                         <TextView
-                            android:id="@+id/select_goods_type"
+                            android:id="@+id/goods_type_tv"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_gravity="center_vertical"
                             android:layout_weight="1"
                             android:gravity="center"
                             android:paddingLeft="16dp"
-                            android:text="标品"
+                            android:text="请选择"
                             android:textColor="@color/little_red"
                             android:textSize="@dimen/font_size_18" />
 
@@ -175,21 +192,22 @@
                         android:layout_marginRight="20dp"
                         android:background="@drawable/white_garyborder_shape">
 
-                        <TextView style="@style/star_style" />
+                        <!--<TextView style="@style/star_style" />-->
 
                         <TextView
                             style="@style/Text_666_18"
                             android:layout_centerVertical="true"
-                            android:text="商品类别:" />
+                            android:text="规格:" />
 
                         <TextView
+                            android:id="@+id/spec_tv"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_gravity="center_vertical"
                             android:layout_weight="1"
                             android:gravity="center"
                             android:paddingLeft="16dp"
-                            android:text="标品"
+                            android:text="请选择"
                             android:textColor="@color/little_red"
                             android:textSize="@dimen/font_size_18" />
 
@@ -222,21 +240,22 @@
                         android:paddingLeft="18dp"
                         android:background="@drawable/white_garyborder_shape">
 
-                        <TextView style="@style/star_style" />
+                        <!--<TextView style="@style/star_style" />-->
 
                         <TextView
                             style="@style/Text_666_18"
                             android:layout_centerVertical="true"
-                            android:text="商品类别:" />
+                            android:text="加料:" />
 
                         <TextView
+                            android:id="@+id/flavour_tv"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_gravity="center_vertical"
                             android:layout_weight="1"
                             android:gravity="center"
                             android:paddingLeft="16dp"
-                            android:text="标品"
+                            android:text="请选择"
                             android:textColor="@color/little_red"
                             android:textSize="@dimen/font_size_18" />
 
@@ -277,21 +296,22 @@
                         android:layout_marginRight="20dp"
                         android:background="@drawable/white_garyborder_shape">
 
-                        <TextView style="@style/star_style" />
+                        <!--<TextView style="@style/star_style" />-->
 
                         <TextView
                             style="@style/Text_666_18"
                             android:layout_centerVertical="true"
-                            android:text="商品类别:" />
+                            android:text="做法:" />
 
                         <TextView
+                            android:id="@+id/zuofa_tv"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_gravity="center_vertical"
                             android:layout_weight="1"
                             android:gravity="center"
                             android:paddingLeft="16dp"
-                            android:text="标品"
+                            android:text="请选择"
                             android:textColor="@color/little_red"
                             android:textSize="@dimen/font_size_18" />
 
@@ -324,21 +344,22 @@
                         android:paddingLeft="18dp"
                         android:background="@drawable/white_garyborder_shape">
 
-                        <TextView style="@style/star_style" />
+                        <!--<TextView style="@style/star_style" />-->
 
                         <TextView
                             style="@style/Text_666_18"
                             android:layout_centerVertical="true"
-                            android:text="商品类别:" />
+                            android:text="口味:" />
 
                         <TextView
+                            android:id="@+id/taste_tv"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_gravity="center_vertical"
                             android:layout_weight="1"
                             android:gravity="center"
                             android:paddingLeft="16dp"
-                            android:text="标品"
+                            android:text="请选择"
                             android:textColor="@color/little_red"
                             android:textSize="@dimen/font_size_18" />
 
@@ -366,7 +387,7 @@
             </LinearLayout>
 
             <RelativeLayout
-                android:id="@+id/rl_input_goods_img"
+                android:id="@+id/goods_img_rl"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="30dp"
@@ -374,14 +395,12 @@
                 android:background="@drawable/white_garyborder_shape">
 
                 <ImageView
-                    android:id="@+id/image_goods_img"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:src="@drawable/take_camera" />
 
                 <TextView
-                    android:id="@+id/tv_goods_img"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
@@ -390,6 +409,11 @@
                     android:text="点击上传商品图片"
                     android:textColor="@color/color_aaaaaa"
                     android:textSize="@dimen/font_size_18" />
+                <ImageView
+                    android:id="@+id/goods_img_iv"
+                    android:layout_width="260dp"
+                    android:layout_height="260dp"
+                    android:layout_centerInParent="true"/>
             </RelativeLayout>
 
         </LinearLayout>
@@ -398,7 +422,87 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.25"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/Text_333_18"
+                android:text="价格信息"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/white_garyborder_shape">
+
+                    <TextView style="@style/star_style" />
+
+                    <TextView
+                        style="@style/Text_666_18"
+                        android:text="销售价:" />
+
+                    <EditText
+                        android:id="@+id/sale_price_et"
+                        style="@style/editTextStyle"
+                        android:hint="请输入销售价"
+                        android:inputType="numberDecimal"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/white_garyborder_shape">
+
+                    <TextView style="@style/star_style" />
+
+                    <TextView
+                        style="@style/Text_666_18"
+                        android:text="会员价:" />
+
+                    <EditText
+                        android:id="@+id/member_price_et"
+                        style="@style/editTextStyle"
+                        android:hint="请输入会员价"
+                        android:inputType="numberDecimal"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp"
+                    android:background="@drawable/white_garyborder_shape">
+
+                    <TextView
+                        style="@style/Text_666_18"
+                        android:text="毛利:" />
+
+                    <EditText
+                        android:id="@+id/profit_et"
+                        style="@style/editTextStyle"
+                        android:hint="便于利润统计"
+                        android:inputType="numberDecimal"/>
+
+                </LinearLayout>
+            </LinearLayout>
 
         </LinearLayout>
 
@@ -429,22 +533,36 @@
             android:layout_height="1dp"
             android:layout_weight="1"/>
         <Button
+            android:id="@+id/cancel_bt"
             android:layout_width="150dp"
             android:layout_height="match_parent"
             android:text="取消"
             android:textSize="18sp"
-            android:textColor="@color/grey_666666"/>
+            android:textColor="@color/white"
+            android:background="@drawable/jacinth_rp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
         <Button
+            android:id="@+id/save_add_bt"
             android:layout_width="150dp"
             android:layout_height="match_parent"
             android:text="保存并新增"
             android:textSize="18sp"
-            android:textColor="@color/grey_666666"/>
+            android:textColor="@color/white"
+            android:background="@drawable/jacinth_rp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
         <Button
+            android:id="@+id/save_return_bt"
             android:layout_width="150dp"
             android:layout_height="match_parent"
-            android:text="新增并返回"
+            android:text="保存并返回"
             android:textSize="18sp"
-            android:textColor="@color/grey_666666"/>
+            android:textColor="@color/white"
+            android:background="@drawable/jacinth_rp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
     </LinearLayout>
 </LinearLayout>

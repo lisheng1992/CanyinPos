@@ -2,7 +2,7 @@ package com.canyinpos.mvp.bean;
 
 import org.litepal.crud.DataSupport;
 
-import java.math.BigDecimal;
+import java.util.List;
 
 /**
  * 作者：Hao on 2017/8/22 17:24
@@ -31,15 +31,15 @@ public class GoodsBean extends DataSupport{
     /**
      * 采购价
      */
-    private BigDecimal purchasePrice;
+    private double purchasePrice;
     /**
      * 销售价
      */
-    private BigDecimal sellingPrice;
+    private double sellingPrice;
     /**
      * 会员价
      */
-    private BigDecimal vipPrice;
+    private double vipPrice;
     /**
      * 是否可称重
      */
@@ -51,7 +51,19 @@ public class GoodsBean extends DataSupport{
     /**
      * 规格
      */
-    private String spec;
+    private List<GoodsSpecBean> mSpecs;
+    /**
+     * 口味
+     */
+    private List<FlavorBean> mFlavors;
+    /**
+     * 做法
+     */
+    private List<ZuofaBean> mZuofas;
+    /**
+     * 加料
+     */
+    private List<JialiaoBean> mJialiaos;
     /**
      * 条码
      */
@@ -70,16 +82,15 @@ public class GoodsBean extends DataSupport{
      */
     private int inventory;
 
-    public GoodsBean(String name,BigDecimal sellPrice) {
+    public GoodsBean(String name,double sellPrice) {
         this.goodsName = name;
         this.sellingPrice = sellPrice;
     }
 
-    public GoodsBean(String name,BigDecimal sellPrice,String classifyName,String spec,String barCode,int inventory) {
+    public GoodsBean(String name,double sellPrice,String classifyName,String barCode,int inventory) {
         this.goodsName = name;
         this.sellingPrice = sellPrice;
         this.classifyName = classifyName;
-        this.spec = spec;
         this.barCode = barCode;
         this.inventory = inventory;
     }
@@ -116,27 +127,27 @@ public class GoodsBean extends DataSupport{
         this.goodsId = goodsId;
     }
 
-    public BigDecimal getPurchasePrice() {
+    public double getPurchasePrice() {
         return purchasePrice;
     }
 
-    public void setPurchasePrice(BigDecimal purchasePrice) {
+    public void setPurchasePrice(double purchasePrice) {
         this.purchasePrice = purchasePrice;
     }
 
-    public BigDecimal getSellingPrice() {
+    public double getSellingPrice() {
         return sellingPrice;
     }
 
-    public void setSellingPrice(BigDecimal sellingPrice) {
+    public void setSellingPrice(double sellingPrice) {
         this.sellingPrice = sellingPrice;
     }
 
-    public BigDecimal getVipPrice() {
+    public double getVipPrice() {
         return vipPrice;
     }
 
-    public void setVipPrice(BigDecimal vipPrice) {
+    public void setVipPrice(double vipPrice) {
         this.vipPrice = vipPrice;
     }
 
@@ -154,14 +165,6 @@ public class GoodsBean extends DataSupport{
 
     public void setClassifyName(String classifyName) {
         this.classifyName = classifyName;
-    }
-
-    public String getSpec() {
-        return spec;
-    }
-
-    public void setSpec(String spec) {
-        this.spec = spec;
     }
 
     public String getBarCode() {
@@ -194,5 +197,37 @@ public class GoodsBean extends DataSupport{
 
     public void setInventory(int inventory) {
         this.inventory = inventory;
+    }
+
+    public List<GoodsSpecBean> getSpecs() {
+        return mSpecs;
+    }
+
+    public void setSpecs(List<GoodsSpecBean> specs) {
+        mSpecs = specs;
+    }
+
+    public List<FlavorBean> getFlavors() {
+        return mFlavors;
+    }
+
+    public void setFlavors(List<FlavorBean> flavors) {
+        mFlavors = flavors;
+    }
+
+    public List<ZuofaBean> getZuofas() {
+        return mZuofas;
+    }
+
+    public void setZuofas(List<ZuofaBean> zuofas) {
+        mZuofas = zuofas;
+    }
+
+    public List<JialiaoBean> getJialiaos() {
+        return mJialiaos;
+    }
+
+    public void setJialiaos(List<JialiaoBean> jialiaos) {
+        mJialiaos = jialiaos;
     }
 }

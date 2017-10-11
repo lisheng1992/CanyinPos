@@ -17,9 +17,11 @@ import com.canyinpos.listener.StringCallBack;
 import com.canyinpos.mvp.adapter.AllGoodsAdapter;
 import com.canyinpos.mvp.bean.ClassifyBean;
 import com.canyinpos.mvp.bean.GoodsBean;
+import com.canyinpos.mvp.ui.activities.AddGoodsActivity;
 import com.canyinpos.mvp.ui.dialog.ClassifyDialog;
 import com.canyinpos.mvp.ui.dialog.ClassifyListPop;
 import com.canyinpos.mvp.ui.fragments.base.BaseFragment;
+import com.canyinpos.utils.SceneUtil;
 import com.canyinpos.utils.ToastUtils;
 
 import org.litepal.crud.DataSupport;
@@ -48,10 +50,10 @@ public class AllGoodsFragment extends BaseFragment implements StringCallBack {
     TextView mWhatClassifyTv;
     @BindView(R.id.classify_ll)
     LinearLayout mClassifyLl;
-    @BindView(R.id.all_classify_bt)
-    Button mAllClassifyBt;
-    @BindView(R.id.all_goods_bt)
-    Button mAllGoodsBt;
+    @BindView(R.id.add_classify_bt)
+    Button mAddClassifyBt;
+    @BindView(R.id.add_goods_bt)
+    Button mAddGoodsBt;
     @BindView(R.id.all_goods_erv)
     EasyRecyclerView mRecyclerView;
 
@@ -140,7 +142,7 @@ public class AllGoodsFragment extends BaseFragment implements StringCallBack {
     /**
      * 添加类别
      */
-     @OnClick(R.id.all_classify_bt) 
+     @OnClick(R.id.add_classify_bt)
      public void addClassify() {
          if (mClassifyDialog == null) {
              mClassifyDialog = new ClassifyDialog();
@@ -148,4 +150,12 @@ public class AllGoodsFragment extends BaseFragment implements StringCallBack {
          }
          mClassifyDialog.show(getActivity().getSupportFragmentManager(),"classify");
      }
+
+    /**
+     * 添加商品
+     */
+    @OnClick(R.id.add_goods_bt)
+    public void addGoods() {
+        SceneUtil.toSceneForResult(getActivity(),AddGoodsActivity.class,null,100);
+    }
 }

@@ -15,7 +15,6 @@ import com.canyinpos.mvp.adapter.MainGoodsAdapter;
 import com.canyinpos.mvp.bean.GoodsBean;
 import com.canyinpos.mvp.ui.fragments.base.BaseFragment;
 
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -54,7 +53,7 @@ public class GoodsFragment extends BaseFragment implements RecyclerArrayAdapter.
         mGoodsRv.setAdapterWithProgress(mMainGoodsAdapter);
         List<GoodsBean> mGoodsList = new ArrayList<>();
         for(int i= 0;i< 10;i++) {
-            GoodsBean goodsBean = new GoodsBean("红烧猪蹄椒盐虾",new BigDecimal(22.00));
+            GoodsBean goodsBean = new GoodsBean("红烧猪蹄椒盐虾",22.00);
             mGoodsList.add(goodsBean);
         }
         mMainGoodsAdapter.addAll(mGoodsList);
