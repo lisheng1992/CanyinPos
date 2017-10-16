@@ -26,7 +26,7 @@ import android.widget.TextView;
 
 import com.canyinpos.R;
 import com.canyinpos.listener.ObjectCallBack;
-import com.canyinpos.mvp.bean.FlavorBean;
+import com.canyinpos.mvp.bean.TasteBean;
 import com.canyinpos.utils.DateUtils;
 import com.canyinpos.utils.ToastUtils;
 
@@ -67,10 +67,10 @@ public class AddFlavorDialog extends DialogFragment {
     private int clickIndex;
     private static final String[] FLAVOR_TYPE = new String[]{"加价 (例如口味)","减价 (例如满10元减2元)"
     ,"价格为0 (例如买一送一)","折扣 (例如第二杯半价)"};
-    private ObjectCallBack<FlavorBean> mCallBack;
+    private ObjectCallBack<TasteBean> mCallBack;
     private int mPosition;
     private int flavorId;//用来update
-    public void setCallBack(ObjectCallBack<FlavorBean> callBack,int position) {
+    public void setCallBack(ObjectCallBack<TasteBean> callBack, int position) {
         this.mCallBack = callBack;
         this.mPosition = position;
     }
@@ -97,9 +97,9 @@ public class AddFlavorDialog extends DialogFragment {
     private void initArguments() {
         if (getArguments() != null) {
             Bundle bundle = getArguments();
-            FlavorBean flavorBean = (FlavorBean) bundle.getSerializable("FlavorBean");
+            TasteBean flavorBean = (TasteBean) bundle.getSerializable("FlavorBean");
             flavorId = flavorBean.getId();
-            judgeIndex(flavorBean.getFlavorType(),flavorBean);
+            judgeIndex(flavorBean.getTasteType(),flavorBean);
         } else {
             mFlavorTypeTv.setText("加价");
             mTypeNameTv.setText("加价");
@@ -196,18 +196,18 @@ public class AddFlavorDialog extends DialogFragment {
                 ToastUtils.showShortToast(getActivity(),"请输入口味名称!");
                 return;
             }
-            FlavorBean flavorBean = new FlavorBean();
-            flavorBean.setFlavorName(flavorName);
-            flavorBean.setFlavorType(clickIndex);
+            TasteBean flavorBean = new TasteBean();
+            flavorBean.setName(flavorName);
+            flavorBean.setTasteType(clickIndex);
             switch (clickIndex){
                 case 0:
                 case 1:
                     String priceStr = TextUtils.isEmpty(mFlavorPriceEt.getText()) ? "0.00":
                             mFlavorPriceEt.getText().toString();
-                    flavorBean.setFlavorPrice(Double.parseDouble(priceStr));
+                    flavorBean.setTastePrice(Double.parseDouble(priceStr));
                     break;
                 case 2:
-                    flavorBean.setFlavorPrice(Double.parseDouble("0.00"));
+                    flavorBean.setTastePrice(Double.parseDouble("0.00"));
                     flavorBean.setDiscountRate(0);
                     break;
                 case 3:
@@ -222,11 +222,11 @@ public class AddFlavorDialog extends DialogFragment {
                     mCallBack.callback(flavorBean);
                 } else {
                     ContentValues values = new ContentValues();
-                    values.put("flavorName", flavorName);
-                    values.put("flavorType",clickIndex);
-                    values.put("flavorPrice",flavorBean.getFlavorPrice());
+                    values.put("tasteName", flavorName);
+                    values.put("tasteType",clickIndex);
+                    values.put("tastePrice",flavorBean.getTastePrice());
                     values.put("discountRate",flavorBean.getDiscountRate());
-                    DataSupport.update(FlavorBean.class, values, flavorId);
+                    DataSupport.update(TasteBean.class, values, flavorId);
                     mCallBack.callbackWithPosition(flavorBean,mPosition);
                 }
             }
@@ -235,14 +235,14 @@ public class AddFlavorDialog extends DialogFragment {
         }
     }
 
-    private void judgeIndex(int index,FlavorBean flavorBean) {
+    private void judgeIndex(int index,TasteBean flavorBean) {
         switch (index){
             case 0:
                 mFlavorTypeTv.setText("加价");
                 mTypeNameTv.setText("加价");
                 mFlavorTypeTil.setHint("请输入加价金额");
                 if (flavorBean != null) {
-                    mFlavorPriceEt.setText(DateUtils.getTwoDoubles(flavorBean.getFlavorPrice()));
+                    mFlavorPriceEt.setText(DateUtils.getTwoDoubles(flavorBean.getTastePrice()));
                 }
                 if (mFlavorTypeLl.getVisibility() == View.INVISIBLE) {
                     mFlavorTypeLl.setVisibility(View.VISIBLE);
@@ -253,7 +253,7 @@ public class AddFlavorDialog extends DialogFragment {
                 mTypeNameTv.setText("减价");
                 mFlavorTypeTil.setHint("请输入减价金额");
                 if (flavorBean != null) {
-                    mFlavorPriceEt.setText(DateUtils.getTwoDoubles(flavorBean.getFlavorPrice()));
+                    mFlavorPriceEt.setText(DateUtils.getTwoDoubles(flavorBean.getTastePrice()));
                 }
                 if (mFlavorTypeLl.getVisibility() == View.INVISIBLE) {
                     mFlavorTypeLl.setVisibility(View.VISIBLE);
@@ -277,9 +277,9 @@ public class AddFlavorDialog extends DialogFragment {
                 break;
         }
         if (flavorBean != null) {
-            mFlavorNameEt.setText(flavorBean.getFlavorName());
+            mFlavorNameEt.setText(flavorBean.getName());
             mFlavorNameEt.selectAll();
-            clickIndex = flavorBean.getFlavorType();
+            clickIndex = flavorBean.getTasteType();
         }
     }
 }

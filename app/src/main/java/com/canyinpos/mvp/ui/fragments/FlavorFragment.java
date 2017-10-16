@@ -11,7 +11,7 @@ import com.canyinpos.listener.ItemDragHelperCallback;
 import com.canyinpos.listener.ObjectCallBack;
 import com.canyinpos.mvp.adapter.FlavorAdapter;
 import com.canyinpos.mvp.adapter.GridSpacingItemDecoration;
-import com.canyinpos.mvp.bean.FlavorBean;
+import com.canyinpos.mvp.bean.TasteBean;
 import com.canyinpos.mvp.ui.dialog.AddFlavorDialog;
 import com.canyinpos.mvp.ui.fragments.base.BaseFragment;
 
@@ -30,7 +30,7 @@ import easyrecyclerview.adapter.RecyclerArrayAdapter;
  * 口味
  */
 
-public class FlavorFragment extends BaseFragment implements ObjectCallBack<FlavorBean>,RecyclerArrayAdapter.OnItemClickListener{
+public class FlavorFragment extends BaseFragment implements ObjectCallBack<TasteBean>,RecyclerArrayAdapter.OnItemClickListener{
     @BindView(R.id.add_flavor_bt)
     Button mAddFlavorBt;
     @BindView(R.id.flavor_list_erv)
@@ -40,7 +40,7 @@ public class FlavorFragment extends BaseFragment implements ObjectCallBack<Flavo
     private FlavorAdapter mFlavorAdapter;
     @Override
     public void initViews(View view) {
-        List<FlavorBean> mFlavorList = DataSupport.findAll(FlavorBean.class);
+        List<TasteBean> mFlavorList = DataSupport.findAll(TasteBean.class);
         mFlavorAdapter = new FlavorAdapter(getActivity(),mFlavorList);
         mFlavorListErv.setLayoutManager(new GridLayoutManager(getActivity(), 6));
         mFlavorListErv.addItemDecoration(new GridSpacingItemDecoration(6, 20, false));
@@ -71,12 +71,12 @@ public class FlavorFragment extends BaseFragment implements ObjectCallBack<Flavo
      }
 
     @Override
-    public void callback(FlavorBean flavorBean) {
+    public void callback(TasteBean flavorBean) {
         mFlavorAdapter.add(flavorBean);
     }
 
     @Override
-    public void callbackWithPosition(FlavorBean flavorBean, int position) {
+    public void callbackWithPosition(TasteBean flavorBean, int position) {
         mFlavorAdapter.update(flavorBean,position);
     }
 

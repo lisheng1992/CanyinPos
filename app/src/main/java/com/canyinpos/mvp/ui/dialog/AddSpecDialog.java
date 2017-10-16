@@ -77,7 +77,7 @@ public class AddSpecDialog extends DialogFragment {
         if (getArguments() != null) {
             Bundle bundle = getArguments();
             GoodsSpecBean specBean = (GoodsSpecBean) bundle.getSerializable("GoodsSpecBean");
-            mFlavorNameEt.setText(specBean.getSpecName());
+            mFlavorNameEt.setText(specBean.getName());
         } else {
 
         }

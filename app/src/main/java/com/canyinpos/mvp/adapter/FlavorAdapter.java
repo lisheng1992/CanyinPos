@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 
 import com.canyinpos.R;
 import com.canyinpos.listener.ItemTouchHelperAdapter;
-import com.canyinpos.mvp.bean.FlavorBean;
+import com.canyinpos.mvp.bean.TasteBean;
 
 import java.util.Collections;
 import java.util.List;
@@ -19,8 +19,8 @@ import easyrecyclerview.adapter.RecyclerArrayAdapter;
  * 邮箱：shengxuan@izjjf.cn
  */
 
-public class FlavorAdapter extends RecyclerArrayAdapter<FlavorBean> implements ItemTouchHelperAdapter {
-    public FlavorAdapter(Context context, List<FlavorBean> objects) {
+public class FlavorAdapter extends RecyclerArrayAdapter<TasteBean> implements ItemTouchHelperAdapter {
+    public FlavorAdapter(Context context, List<TasteBean> objects) {
         super(context, objects);
     }
 

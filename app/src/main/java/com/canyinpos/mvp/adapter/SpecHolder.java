@@ -23,7 +23,7 @@ public class SpecHolder extends BaseViewHolder<GoodsSpecBean> {
     @Override
     public void setData(GoodsSpecBean data, int position) {
         super.setData(data, position);
-        setText(R.id.flavor_name_tv,data.getSpecName());
+        setText(R.id.flavor_name_tv,data.getName());
         switch (data.getSpecType()){
             case 0:
                 setText(R.id.flavor_price_tv,"x"+ DateUtils.getTwoDoubles(data.getSpecRate()));

@@ -1,7 +1,5 @@
 package com.canyinpos.mvp.bean;
 
-import org.litepal.crud.DataSupport;
-
 import java.io.Serializable;
 
 /**
@@ -9,21 +7,18 @@ import java.io.Serializable;
  * 邮箱：shengxuan@izjjf.n
  */
 
-public class FlavorBean extends DataSupport implements Serializable{
+public class TasteBean extends WrapBaseBean implements Serializable{
 
     private int id;
-    /**
-     * 口味名称
-     */
-    private String flavorName;
+
     /**
      * 口味类型 0.加价 1.减价 2.价格为0,例如买一送一 3.折扣 例如第二杯半价
      */
-    private int flavorType;
+    private int tasteType;
     /**
      * 加价或减价的金额
      */
-    private double flavorPrice;
+    private double tastePrice;
     /**
      * 折扣率
      */
@@ -37,28 +32,20 @@ public class FlavorBean extends DataSupport implements Serializable{
         this.id = id;
     }
 
-    public String getFlavorName() {
-        return flavorName;
+    public int getTasteType() {
+        return tasteType;
     }
 
-    public void setFlavorName(String flavorName) {
-        this.flavorName = flavorName;
+    public void setTasteType(int tasteType) {
+        this.tasteType = tasteType;
     }
 
-    public int getFlavorType() {
-        return flavorType;
+    public double getTastePrice() {
+        return tastePrice;
     }
 
-    public void setFlavorType(int flavorType) {
-        this.flavorType = flavorType;
-    }
-
-    public double getFlavorPrice() {
-        return flavorPrice;
-    }
-
-    public void setFlavorPrice(double flavorPrice) {
-        this.flavorPrice = flavorPrice;
+    public void setTastePrice(double tastePrice) {
+        this.tastePrice = tastePrice;
     }
 
     public double getDiscountRate() {

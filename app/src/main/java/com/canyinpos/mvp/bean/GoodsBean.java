@@ -41,6 +41,10 @@ public class GoodsBean extends DataSupport{
      */
     private double vipPrice;
     /**
+     * 毛利
+     */
+    private double profit;
+    /**
      * 是否可称重
      */
     private boolean isWeigh;
@@ -55,15 +59,15 @@ public class GoodsBean extends DataSupport{
     /**
      * 口味
      */
-    private List<FlavorBean> mFlavors;
+    private List<TasteBean> mTastes;
     /**
      * 做法
      */
-    private List<ZuofaBean> mZuofas;
+    private List<RecipeBean> mRecipes;
     /**
      * 加料
      */
-    private List<JialiaoBean> mJialiaos;
+    private List<FlavourBean> mFlavours;
     /**
      * 条码
      */
@@ -207,27 +211,35 @@ public class GoodsBean extends DataSupport{
         mSpecs = specs;
     }
 
-    public List<FlavorBean> getFlavors() {
-        return mFlavors;
+    public List<TasteBean> getTastes() {
+        return mTastes;
     }
 
-    public void setFlavors(List<FlavorBean> flavors) {
-        mFlavors = flavors;
+    public void setTastes(List<TasteBean> tastes) {
+        mTastes = tastes;
     }
 
-    public List<ZuofaBean> getZuofas() {
-        return mZuofas;
+    public List<RecipeBean> getRecipes() {
+        return mRecipes;
     }
 
-    public void setZuofas(List<ZuofaBean> zuofas) {
-        mZuofas = zuofas;
+    public double getProfit() {
+        return profit;
     }
 
-    public List<JialiaoBean> getJialiaos() {
-        return mJialiaos;
+    public void setProfit(double profit) {
+        this.profit = profit;
     }
 
-    public void setJialiaos(List<JialiaoBean> jialiaos) {
-        mJialiaos = jialiaos;
+    public void setRecipes(List<RecipeBean> recipes) {
+        mRecipes = recipes;
+    }
+
+    public List<FlavourBean> getFlavours() {
+        return mFlavours;
+    }
+
+    public void setFlavours(List<FlavourBean> flavours) {
+        mFlavours = flavours;
     }
 }

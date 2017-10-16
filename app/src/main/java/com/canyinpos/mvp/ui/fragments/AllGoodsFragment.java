@@ -26,7 +26,6 @@ import com.canyinpos.utils.ToastUtils;
 
 import org.litepal.crud.DataSupport;
 
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -110,10 +109,10 @@ public class AllGoodsFragment extends BaseFragment implements StringCallBack {
         initRecyclerViewWithDecoratio(mRecyclerView);
         mRecyclerView.setAdapter(mArrayAdapter);
         List<GoodsBean> goodsList = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
-            GoodsBean goodsBean = new GoodsBean("哈哈哈",new BigDecimal(88),"哈哈哈","哈哈哈","哈哈哈",80);
+        /*for (int i = 0; i < 10; i++) {
+            GoodsBean goodsBean = new GoodsBean("哈哈哈",88,"哈哈哈","哈哈哈","哈哈哈",80);
             goodsList.add(goodsBean);
-        }
+        }*/
         mArrayAdapter.addAll(goodsList);
     }
 

@@ -43,12 +43,11 @@
                     <TextView style="@style/star_style" />
 
                     <TextView
-                        android:id="@+id/tv_goods_bar_code"
                         style="@style/Text_666_18"
                         android:text="商品名称:" />
 
                     <EditText
-                        android:id="@+id/goods_name_tv"
+                        android:id="@+id/goods_name_et"
                         style="@style/editTextStyle"
                         android:hint="请输入商品名称"
                         android:inputType="text"
@@ -81,7 +80,7 @@
                         <EditText
                             android:id="@+id/goods_barcode_et"
                             style="@style/editTextStyle2"
-                            android:hint="请通过手动或扫描枪输入条码"
+                            android:hint="请输入6位到13位之内的数字,以便扫码查找商品"
                             android:inputType="number"/>
                     </LinearLayout>
 
@@ -126,6 +125,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/goods_classify_ll"
                         android:layout_width="400dp"
                         android:layout_height="match_parent"
                         android:gravity="center_vertical"
@@ -183,6 +183,7 @@
                     android:orientation="horizontal">
 
                     <LinearLayout
+                        android:id="@+id/spec_ll"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="match_parent"
@@ -232,6 +233,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/flavour_ll"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="match_parent"
@@ -287,6 +289,7 @@
                     android:orientation="horizontal">
 
                     <LinearLayout
+                        android:id="@+id/recipe_ll"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="match_parent"
@@ -304,7 +307,7 @@
                             android:text="做法:" />
 
                         <TextView
-                            android:id="@+id/zuofa_tv"
+                            android:id="@+id/recipe_tv"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_gravity="center_vertical"
@@ -336,6 +339,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/taste_ll"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="match_parent"
@@ -525,7 +529,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
-            android:checked="true"
+            android:checked="false"
             android:textOff="否"
             android:textOn="是" />
         <View

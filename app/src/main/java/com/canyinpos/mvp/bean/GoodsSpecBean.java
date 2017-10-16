@@ -1,18 +1,12 @@
 package com.canyinpos.mvp.bean;
 
-import org.litepal.crud.DataSupport;
-
 /**
  * 作者：Hao on 2017/9/9 15:47
  * 邮箱：shengxuan@izjjf.cn
  */
 
-public class GoodsSpecBean extends DataSupport {
+public class GoodsSpecBean extends WrapBaseBean {
     private int id;
-    /**
-     * 名称
-     */
-    private String specName;
     /**
      * 倍率
      */
@@ -33,14 +27,6 @@ public class GoodsSpecBean extends DataSupport {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getSpecName() {
-        return specName;
-    }
-
-    public void setSpecName(String specName) {
-        this.specName = specName;
     }
 
     public double getSpecRate() {
